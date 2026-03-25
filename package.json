@@ -1,0 +1,16 @@
+{
+  "name": "backend_project",
+  "version": "1.0.0",
+  "description": "A app to learn backend",
+  "keywords": [
+    "javascript",
+    "nodejs"
+  ],
+  "license": "ISC",
+  "author": "Nilakshe Sahu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
