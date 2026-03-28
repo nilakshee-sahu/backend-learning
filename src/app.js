@@ -15,10 +15,6 @@ app.use(express.urlencoded({
     limit: "16kb"
 }))
 app.use(express.static("public"))
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(err.status || 500).json({ message: err.message });
-});
+app.use(cookieParser())
 
 export {app}
