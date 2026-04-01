@@ -12,7 +12,7 @@ const generateAccessAndRefreshTokens = async(userId) => {
         const refreshToken = user.generateRefreshToken()
 
         user.refreshToken =  refreshToken
-        await user.save({validitBeforeSave : false})
+        await user.save({validiteBeforeSave : false})
 
         return {accessToken, refreshToken}
     } catch (error) {
@@ -49,7 +49,7 @@ const registerUser = asyncHandler( async (req, res) => {
     }
 
     if(!avatarLocalPath){
-        throw new ApiError(400, "Avatar file is requiered")
+        throw new ApiError(400, "Avatar file is required")
     }
 
     //upload them to cloudinary
@@ -246,7 +246,7 @@ const updateAccoutDetails = asyncHandler(async (req, res) => {
 
     return res
     .status(200)
-    .json(new ApiResponse(200, user, "Accouct details updated successfully"))
+    .json(new ApiResponse(200, user, "Account details updated successfully"))
 })
 
 const updateUserAvatar = asyncHandler(async (req, res) => {
